@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodePlayground", "CodePlayground.csproj", "{9B31B439-8A80-49DD-A9D7-13214FE056C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodePlaygroundTests", "..\CodePlaygroundTests\CodePlaygroundTests.csproj", "{53100BF0-35A1-4F21-8F69-A19C6D28200B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9B31B439-8A80-49DD-A9D7-13214FE056C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B31B439-8A80-49DD-A9D7-13214FE056C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B31B439-8A80-49DD-A9D7-13214FE056C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B31B439-8A80-49DD-A9D7-13214FE056C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53100BF0-35A1-4F21-8F69-A19C6D28200B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53100BF0-35A1-4F21-8F69-A19C6D28200B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53100BF0-35A1-4F21-8F69-A19C6D28200B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53100BF0-35A1-4F21-8F69-A19C6D28200B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E692874A-978D-4892-ABCC-288B13D22C1F}
+	EndGlobalSection
+EndGlobal
