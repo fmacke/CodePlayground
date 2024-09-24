@@ -3,6 +3,14 @@ using Xunit.Sdk;
 
 namespace CodePlayground.DynamicProgramming
 {
+    /// <summary>
+    /// this class provides a solution to the House Robber problem using a recursive approach with memoization to optimize the computation
+    /// </summary>
+    /// <remarks>
+    /// This is a TOP DOWN approach to this dynamic programming problem.  It's OK for small inputs, but can run into stack overflow issues.
+    /// See other approaches to same project in this folder for more details.
+    /// See leetcode problem 198 for more details.
+    /// </remarks>
     public class HouseRobber_RecurseAndMemoise : ISolution
     {
         private int[] nums;
