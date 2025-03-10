@@ -3,7 +3,7 @@
     /// <summary>
     /// This class provides a solution to find the count of numbers with an even number of digits in a given array.
     /// </summary>
-    public class FindNumbersWithEvenDigits : ISolution
+    public class FindNumbersWithEvenDigits : ISingleSolution
     {
         private int[] nums;
         public FindNumbersWithEvenDigits(int[] ints)

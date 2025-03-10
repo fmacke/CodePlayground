@@ -8,7 +8,7 @@
     /// See other approaches to same project in this folder for more details.
     /// See leetcode problem 198 for more details.
     /// </remarks>
-    public class HouseRobber_RecurseAndMemoise : ISolution
+    public class HouseRobber_RecurseAndMemoise : ISingleSolution
     {
         private int[] nums;
         private Dictionary<int, int> map = new Dictionary<int, int>();

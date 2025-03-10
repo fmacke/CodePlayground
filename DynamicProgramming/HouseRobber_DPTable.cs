@@ -16,7 +16,7 @@ namespace CodePlayground.DynamicProgramming
     /// we don't have a recursion stack. When the number of houses is large, a recursion stack can become a serious limitation, which
     /// can ultimately lead to compiler running into stack-overflow problems.  See LeetCode problem 198 for more details.
     /// </remarks>
-    public class HouseRobber_DPTable : ISolution
+    public class HouseRobber_DPTable : ISingleSolution
     {
         private int[] nums;
 

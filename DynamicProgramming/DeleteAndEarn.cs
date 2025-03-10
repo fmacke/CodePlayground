@@ -1,6 +1,6 @@
 ﻿namespace CodePlayground.DynamicProgramming
 {
-    public class DeleteAndEarn : ISolution
+    public class DeleteAndEarn : ISingleSolution
     {
         private static Dictionary<int, int> memo = new Dictionary<int, int>();
         private int[] ints;

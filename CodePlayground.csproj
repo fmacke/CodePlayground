@@ -7,13 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="PlaygroundTests\**" />
     <Compile Remove="TestProject1\**" />
+    <EmbeddedResource Remove="PlaygroundTests\**" />
     <EmbeddedResource Remove="TestProject1\**" />
+    <None Remove="PlaygroundTests\**" />
     <None Remove="TestProject1\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="xunit.assert" Version="2.9.3" />
   </ItemGroup>
 
 </Project>

@@ -10,7 +10,7 @@
     /// we don't have a recursion stack. The advantage of this approach over using the dynamic programming table (also BOTTOM UP approach) is
     /// that we only need to keep track of 2 variables at any give time, reducing memory load required at runtime.
     /// </remarks>
-    public class HouseRobber_DPOptimised : ISolution
+    public class HouseRobber_DPOptimised : ISingleSolution
     {
         private int[] nums;
 
