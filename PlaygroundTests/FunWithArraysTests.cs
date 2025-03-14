@@ -1,4 +1,5 @@
 using CodePlayground.FunWithArrays;
+using NUnit.Framework;
 
 namespace PlaygroundTests
 {
@@ -88,6 +89,48 @@ namespace PlaygroundTests
             expected = new int[] { 1 };
             new MergeSortedArray(ref input1, m, input2, n);
             Assert.AreEqual(expected, input1);
+        }
+        [Test]
+        public void DeleteFromArrayTest()
+        {
+            var nums = new int[] { 3, 2, 2, 3 };
+            var val = 3;
+            var expectedNums = new int[] { 2, 2 };
+            var expectedCount = expectedNums.Length;
+            int k = DeleteFromArray.RemoveElement(nums, val);
+            Assert.AreEqual(expectedCount, k);
+            Array.Sort(nums, 0, k);
+            for (int i = 0; i < expectedNums.Length; i++)
+            {
+                Assert.AreEqual(nums[i], expectedNums[i]);
+            }
+
+
+            nums = new int[] { 0, 1, 2, 2, 3, 0, 4, 2 };
+            val = 2;
+            expectedNums = new int[] { 0, 1, 4, 0, 3 };
+            expectedCount = expectedNums.Length;
+            k = DeleteFromArray.RemoveElement(nums, val);
+            Assert.AreEqual(expectedCount, k);
+            Array.Sort(nums, 0, k);
+            Array.Sort(expectedNums);
+            for (int i = 0; i < expectedNums.Length; i++)
+            {
+                Assert.AreEqual(nums[i], expectedNums[i]);
+            }
+
+            //nums = new int[] { 4,5 };
+            //val = 4;
+            //expectedNums = new int[] { 5 };
+            //expectedCount = expectedNums.Length;
+            //k = DeleteFromArray.RemoveElement(nums, val);
+            //Assert.AreEqual(expectedCount, k);
+            //Array.Sort(nums, 0, k);
+            //Array.Sort(expectedNums);
+            //for (int i = 0; i < expectedNums.Length; i++)
+            //{
+            //    Assert.AreEqual(nums[i], expectedNums[i]);
+            //}
         }
     }
 }
