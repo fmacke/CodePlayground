@@ -1,41 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.Immutable;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CodePlayground.FunWithArrays
+﻿namespace CodePlayground.FunWithArrays
 {
-    public class MergeSortedArray : IArraySolution
+    public class MergeSortedArray 
     {
-        int[] nums1, nums2;
-        int m, n;
-        public MergeSortedArray(int[] Nums1, int M, int[] Nums2, int N)
+        public MergeSortedArray(ref int[] nums1, int m, int[] nums2, int n)
         {
-            nums1 = Nums1;
-            nums2 = Nums2;
-            m = M;
-            n = N;
-        }
-        public int[] Solve()
-        {
-            for(int i = 0; i < nums2.Length; i++)
+            if (nums1.Length < 1)
             {
-                for (int j = 0; j < nums1.Length; j++)
+                Array.Resize(ref nums1, n);
+                for (int i = 0; i < nums2.Length; i++)
+                    nums1[i] = nums2[i];
+            }
+            else
+            {
+                var count = 0;
+                for (int i = m; i < m + n; i++)
                 {
-                    if (nums2[i] < nums1[j])
-                    {
-                        for (int k = nums1.Length - 1; k > j; k--)
-                        {
-                            nums1[k] = nums1[k - 1];
-                        }
-                        nums1[j] = nums2[i];
-                        break;
-                    }
+                    nums1[i] = nums2[count];
+                    count++;
                 }
             }
-            return nums1;
+            Array.Sort(nums1);
         }
 
     }

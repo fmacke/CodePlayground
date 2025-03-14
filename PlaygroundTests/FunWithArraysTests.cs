@@ -70,10 +70,24 @@ namespace PlaygroundTests
             int m = 3;
             int n = 3;
             var expected = new int[] { 1, 2, 2, 3, 5, 6 };
-            var actual = new MergeSortedArray(input1, m, input2, n).Solve();
+            new MergeSortedArray(ref input1, m, input2, n);
             Assert.AreEqual(expected, input1);
 
+            input1 = new int[] { 1 };
+            input2 = new int[] {  };
+            m = 1;
+            n = 0;
+            expected = new int[] { 1 };
+            new MergeSortedArray(ref input1, m, input2, n);
+            Assert.AreEqual(expected, input1);
 
+            input1 = new int[0] ;
+            input2 = new int[] { 1 };
+            m = 0;
+            n = 1;
+            expected = new int[] { 1 };
+            new MergeSortedArray(ref input1, m, input2, n);
+            Assert.AreEqual(expected, input1);
         }
     }
 }
