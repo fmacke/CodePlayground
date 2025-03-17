@@ -3,7 +3,7 @@ using NUnit.Framework;
 
 namespace PlaygroundTests
 {
-    public class Tests
+    public class FunWithArrayTests
     {
         [SetUp]
         public void Setup()
@@ -75,14 +75,14 @@ namespace PlaygroundTests
             Assert.AreEqual(expected, input1);
 
             input1 = new int[] { 1 };
-            input2 = new int[] {  };
+            input2 = new int[] { };
             m = 1;
             n = 0;
             expected = new int[] { 1 };
             new MergeSortedArray(ref input1, m, input2, n);
             Assert.AreEqual(expected, input1);
 
-            input1 = new int[0] ;
+            input1 = new int[0];
             input2 = new int[] { 1 };
             m = 0;
             n = 1;
@@ -119,18 +119,45 @@ namespace PlaygroundTests
                 Assert.AreEqual(nums[i], expectedNums[i]);
             }
 
-            //nums = new int[] { 4,5 };
-            //val = 4;
-            //expectedNums = new int[] { 5 };
-            //expectedCount = expectedNums.Length;
-            //k = DeleteFromArray.RemoveElement(nums, val);
-            //Assert.AreEqual(expectedCount, k);
-            //Array.Sort(nums, 0, k);
-            //Array.Sort(expectedNums);
-            //for (int i = 0; i < expectedNums.Length; i++)
-            //{
-            //    Assert.AreEqual(nums[i], expectedNums[i]);
-            //}
+            nums = new int[] { 4, 5 };
+            val = 4;
+            expectedNums = new int[] { 5 };
+            expectedCount = expectedNums.Length;
+            k = DeleteFromArray.RemoveElement(nums, val);
+            Assert.AreEqual(expectedCount, k);
+            Array.Sort(nums, 0, k);
+            Array.Sort(expectedNums);
+            for (int i = 0; i < expectedNums.Length; i++)
+            {
+                Assert.AreEqual(nums[i], expectedNums[i]);
+            }
+        }
+        [Test]
+        public void RemoveDuplicatesFromSortedArrayTests()
+        {
+            var nums = new int[] { 1, 1, 2 };
+            var val = 2;
+            var expectedNums = new int[] { 1, 2 };
+            var expectedCount = expectedNums.Length;
+            int k = RemoveDuplicatesFromSortedArray.RemoveDuplicates(nums);
+            Assert.AreEqual(expectedCount, k);
+
+            for (int i = 0; i < expectedNums.Length; i++)
+            {
+                Assert.AreEqual(nums[i], expectedNums[i]);
+            }
+
+            nums = new int[] { 0, 0, 1, 1, 1, 2, 2, 3, 3, 4 };
+            val = 5;
+            expectedNums = new int[] { 0, 1, 2, 3, 4 };
+            expectedCount = expectedNums.Length;
+            k = RemoveDuplicatesFromSortedArray.RemoveDuplicates(nums);
+            Assert.AreEqual(expectedCount, k);
+
+            for (int i = 0; i < expectedNums.Length; i++)
+            {
+                Assert.AreEqual(nums[i], expectedNums[i]);
+            }
         }
     }
 }

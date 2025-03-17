@@ -4,25 +4,17 @@
     {
         public static int RemoveElement(int[] nums, int val)
         {
-            var doubleChecked = false;
-            for (int x =0; x< nums.Length; x++)
+            int k = 0;
+            for (int i = 0; i < nums.Length; i++)
             {
-                if (nums[x] == val)
-                {                    
-                    for (int y = x + 1; y < nums.Length; y++)
-                    {
-                        nums[y - 1] = nums[y];
-                    }
-                }
-                if (nums[x] == val)
+                if (nums[i] != val)
                 {
-                    for (int y = x + 1; y < nums.Length; y++)
-                    {
-                        nums[y - 1] = nums[y];
-                    }
+                    nums[k] = nums[i];
+                    k++;
                 }
             }
-            return nums.Count(v => v != val);
+            Array.Resize(ref nums, k);
+            return k;
         }
     }
 }
